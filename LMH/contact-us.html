@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand h-100" href="index.html">L.M.Hill Carpets</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon custom-toggler"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fs-5">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="services.html">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 active" href="contact-us.html">Get in Touch</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact-us" class="py-5 fade-in">  
+        <div class="container mt-lg-4 mt-md-4">
+            <div class="row align-items-center">
+                <div class="col text-center mb-4 mb-lg-0">
+                    <h1 class="fw-bold display-6">Contact Us</h1>
+                    <div class="accent-line"></div>
+                    <p class="lead">Contact Form</p>
+                </div>
+            </div>
+
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label" style="color: var(--charcoal); font-weight: 600;">Your Name</label>
+                    <input required type="text" class="form-control" id="name" name="name" placeholder="John Doe">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label" style="color: var(--charcoal); font-weight: 600;">Your Email Address</label>
+                    <input required type="email" class="form-control" id="email" name="email" placeholder="example@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label" style="color: var(--charcoal); font-weight: 600;">Message</label>
+                    <textarea required class="form-control" id="message" name="message" rows="5"></textarea>
+                </div>
+                <div class="mb-1">
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary w-100">Contact Us</button>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <a class="link-dark" href="https://support.microsoft.com/en-gb/office/make-outlook-the-default-program-for-email-contacts-and-calendar-ff7990c4-54c4-4390-8fe3-c0285226f021" target="_blank">Not Working?</a>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </section>   
+
+    <footer>
+        <div class="text-center">
+            <small style="opacity: 0.8;">Made by <a href="" target="_blank" class="link-light">Harry Musther</a></small>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/page.js"></script>
+</body>
+</html>
