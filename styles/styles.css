@@ -1,0 +1,7 @@
+.service-card {
+    top: 0px;
+}
+.service-card:hover {
+    top: -10px;
+    transition: top ease 0.2s;
+}

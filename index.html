@@ -3,109 +3,82 @@
 <head>
     <title>The Watch Shop Of Preston</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css"/>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom">
-        <div class="container-fluid">
-            <a class="navbar-brand h-100 py-0 my-0" href="#">The Watch Shop Of Preston</a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<body style="padding-top: 60px;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-white bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand h-100" href="#home">The Watch Shop Of Preston</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-middle fs-5 ">
-                    <li class="nav-item">
-                        <a class="nav-link px-4" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-4" href="#">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-4" href="#">Services We Offer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-4" href="#">Contact Us</a>
-                    </li>
+                <ul class="navbar-nav ms-auto fs-5">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About us</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#services">Services We Offer</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid text-center align-middle bg-black text-white">
-        <p class="py-2">Take a look at our google reviews <a class="link-light" href="https://www.google.com/search?sca_esv=86c72741684d2a2b&sxsrf=AE3TifN-3pgjM7nQsTKka2IXfN577wkeqA:1751223733066&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E322d5gK2ROtPxD7rsKT_v9ugYGgYWSp0OqErwu7czyQg6Fn5txqjWFcU6u1zW0_b3zPN1Yy0_U3c2q1HfI0zAerUsMIpJdxuCfCMaEFCYWc3YUZeQ%3D%3D&q=The+Watch+Shop+Of+Preston+Reviews&sa=X&ved=2ahUKEwijmKDkqJeOAxWkQEEAHZ57JaYQ0bkNegQIHxAE&biw=1920&bih=991&dpr=1">here! </a></p>
+    <div class="bg-black text-white text-center py-2">
+        <p class="mb-0">Take a look at our Google reviews <a class="link-light" href="https://www.google.com/search?q=The+Watch+Shop+Of+Preston+Reviews" target="_blank">here</a>!</p>
     </div>
 
-    <div class="container px-4 py-5 my-3 border-bottom">
-        <div class="d-flex align-items-center justify-content-between flex-wrap"> 
-            <div class="col-5 align-middle ">
-                <h1 class="fw-bold display-5 mb-3">The Watch Shop Of Preston</h1>
+    <section id="home" class="container py-5 border-bottom">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="text-center text-md-start mb-4 mb-md-0">
+                <h1 class="fw-bold display-5">The Watch Shop Of Preston</h1>
                 <p class="lead">Watch experts that you can trust.</p>
             </div>
-            <div class="col">
-                <img class="rounded" src="images/store-front.webp" width="80%" height="80%"/>
-                <p class="fst-italic">The Watch Shop Of Preston, Fishergate Centre, Preston, PR1 8HJ</p>
+            <div class="text-center">
+                <img src="images/store-front.webp" alt="Store front" class="img-fluid rounded mb-2" style="max-width: 100%; height: auto;">
+                <p class="fst-italic mb-0">Fishergate Centre, Preston, PR1 8HJ</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container-fluid text-center px-4 py-5 my-5 border-bottom">
-        <div class="row">
-            <div class="col">
-                <h1 class="fw-bold display-5 mb-3">About us</h1>
-                <p class="lead">
-                    Opening in 2022, we are a small team providing all watch related services such as repairs, servicing and sales.
-                </p>
-                <p class="lead">
-                    Our goal is to offer a fast, friendly and reliable service for all of your watch related needs, no matter the brand.
-                </p>
-            </div>
+    <section id="about" class="container text-center py-5 border-bottom">
+        <h1 class="fw-bold display-5 mb-3">About us</h1>
+        <p class="lead">Opening in January 2024, we are a small team providing all watch related services such as repairs, servicing and sales.</p>
+        <p class="lead">Our goal is to offer a fast, friendly and reliable service for all of your watch related needs, no matter the brand.</p>
+        <div class="mt-4">
+            <iframe width="100%" height="370" frameborder="0" scrolling="no" src="https://maps.google.com/maps?hl=en&amp;q=Fishergate%20Centre%20Preston+(Our%20Store)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
-        <div class="row my-3">
-            <div class="col">
-                <iframe width="520" height="370" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=370&amp;hl=en&amp;q=Fishergate%20Centre%20Preston+(Our%20Store)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://www.versicherungen.at/'>Versicherungen</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=2fb0ddba65e9e9a88317cbc7697a8d2c308c8074'></script>
-            </div>
-        </div>
-    </div>
+    </section>
 
-
-    <div class="container px-4 py-5 mt-5">
-        <div class="row">
-            <div class="col">
-                <h1 class="fw-bold text-center display-5 mb-3">Services We Offer</h1>
-            </div>
-        </div>
-        
-        <div class="row g-3">
-            <div class="row text-center">
-                <p class="lead">We offer a large range of services for your needs, if you have any further inquires, contact us <a class="link-dark" href=""> here</a>.</p>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="images/repair.jpg" class="card-img-top"/> 
+    <section id="services" class="container py-5 border-bottom">
+        <h1 class="fw-bold text-center display-5 mb-3">Services We Offer</h1>
+        <p class="lead text-center">We offer a large range of services. For any inquiries, contact us <a class="link-dark" href="#contact">here</a>.</p>
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="images/repair.jpg" class="card-img-top" alt="Repair service">
                     <div class="card-body">
                         <h5 class="card-title">Repairs</h5>
                         <p class="card-text">We can repair <span class="fw-bold">any</span> brand of watch. Pop into our store or contact us for more information!</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="images/servicing.jpg" class="card-img-top"/> 
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="images/servicing.jpg" class="card-img-top" alt="Servicing">
                     <div class="card-body">
                         <h5 class="card-title">Servicing</h5>
-                        <p class="card-text">We can offer servicing such as battery and strap replacement. Contact us for more information.</p>
+                        <p class="card-text">We offer servicing such as battery and strap replacement. Contact us for more information.</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="images/sales.jpg" class="card-img-top"/> 
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="images/sales.jpg" class="card-img-top" alt="Watch sales">
                     <div class="card-body">
                         <h5 class="card-title">Sales</h5>
                         <p class="card-text">If you're looking to purchase a new watch, we have multiple brands in store!</p>
@@ -113,77 +86,76 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h1 class="fw-bold text-center display-5 mb-3">Contact Us</h1>
+    <section id="contact" class="container py-5 border-bottom">
+        <h1 class="fw-bold text-center display-5 mb-3">Contact Us</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h4>Our Details</h4>
+                <p class="lead">Email: <a class="link-dark" href="mailto:info@twspreston.co.uk">info@twspreston.co.uk</a></p>
+                <p class="lead">Phone: <a class="link-dark" href="tel:+441772395328">01772 395328</a></p>
+                <p class="lead">Address: The Watch Shop Preston, Fishergate, Preston PR1 8HJ</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Use Our Contact Form</h4>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input required type="text" class="form-control" id="name" name="name" placeholder="John Doe">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email Address</label>
+                        <input required type="email" class="form-control" id="email" name="email" placeholder="example@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea required class="form-control" id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary w-100">Contact Us</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="row text-center">
-                    <h4>Our Details</h4>
-                </div>
-                <div class="row">
-                    <p class="lead">Email: <a class="link-dark">info@twspreston.co.uk</a></p>
-                    <p class="lead">Telephone: <a class="link-dark" href="tel:+441772395328">01772395328</a></p>
-                    <p class="lead">Address: The Watch Shop Preston, Fishergate, Preston PR1 8HJ</p>
-    
-                </div>
-            </div>
-            <div class="col">
-                <div class="row text-center">
-                    <h4>Alternatively, use this form</h4>
-                </div>
-                <div class="row">
-                    <div class="mb-3">
-                      <label for="name" class="form-label">Your Name</label>
-                      <input required type="text" class="form-control" id="name" placeholder="John Doe">
-                    </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Your Email Address</label>
-                      <input required type="email" class="form-control" id="email" placeholder="example@example.com">
-                    </div>
-                    <div class="mb-3">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea required class="form-control" id="message" rows="5"></textarea>
-                    </div>
-                    <div class="mb-3">
-                      <button type="button" class="form-control btn btn-primary" id="formContactUsBttn">Contact Us</button>
-                    </div>
-                  </div>
-                  
-                      
-                     
-            </div>
+    </section>
+
+    <footer class="bg-light py-3">
+        <div class="text-center">
+            <small>Made By Harry Musther</small>
         </div>
-    </div>
+    </footer>
+
     <!-- Bootstrap 5 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        document.getElementById('formContactUsBttn').addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent default form submission
-      
-          const name = document.getElementById('name').value.trim();
-          const email = document.getElementById('email').value.trim();
-          const message = document.getElementById('message').value.trim();
-      
-          if (!name || !email || !message) {
-            alert("Please fill in all fields.");
-            return;
-          }
-      
-          const subject = encodeURIComponent("Contact Form Submission from " + name);
-          const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-      
-          // Replace with your desired recipient email
-          const mailtoLink = `mailto:info@twspreston.co.uk?subject=${subject}&body=${body}`;
-      
-          window.location.href = mailtoLink;
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+          
+          const subject = `Contact Form Submission from ${name}`;
+          const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+          
+          window.location.href = `mailto:info@twspreston.co.uk?subject=${encodeURIComponent(subject)}&body=${body}`;
         });
-      </script>
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
