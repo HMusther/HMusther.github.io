@@ -1,124 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand h-100" href="index.html">L.M.Hill Carpets</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon custom-toggler"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fs-5">
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 active" href="services.html">Our Services</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="contact-us.html">Get in Touch</a></li>
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand h-100" href="index.html">L.M.Hill Carpets</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon custom-toggler"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fs-5">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3 active" href="services.html">Our Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="index.html#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contact-us.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="services" class="py-5 fade-in">
+    <div class="container mt-lg-4 mt-md-4 ">
+      <div class="row align-items-center">
+        <div class="col text-center mb-4 mb-lg-0">
+          <h1 class="fw-bold display-6">Our Services</h1>
+          <div class="accent-line"></div>
+          <p class="lead">Transform your home with beautiful new flooring from L.M. Hill Carpets, based in Hillsborough
+            in Sheffield. "Your local carpet shop." With a wide range of flooring options to choose from, you’ll find
+            the perfect style, comfort level and practicality that’s just right for the way you live. We offer a huge
+            choice of Carpet, Laminate, Vinyl and Rugs, as well as underlay and accessories at prices to suit all
+            budgets.</p>
+        </div>
+      </div>
+      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0 h-100">
+          <div class="col-md my-auto mx-auto">
+            <img src="images/lvt.jpg" class="img-fluid rounded-start" alt="Luxury Vinyl Tiles">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Luxury Vinyl Tiles</h5>
+              <p class="card-text fs-10">Our Luxury Vinyl Tiles offer elegance and superior design quality, combined
+                with high durability and resistance.</p>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vinylModel">
+                More information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0 h-100">
+          <div class="col-md my-auto mx-auto">
+            <img src="images/rugs.jpg" class="img-fluid rounded-start" alt="Rugs">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Rugs</h5>
+              <p class="card-text fs-10">Take a look at our fantastic selection of rugs and find the finishing touch for
+                any room in your home.</p>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#rugModal">
+                More information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0 h-100">
+          <div class="col-md my-auto mx-auto">
+            <img src="images/carpets.jpg" class="img-fluid rounded-start" alt="Carpets">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Carpets</h5>
+              <p class="card-text fs-10">Our impressive carpet range offers inspiration for every home in a variety of
+                styles, designs and colours.</p>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carpetModal">
+                More information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0 h-100">
+          <div class="col-md my-auto mx-auto">
+            <img src="images/cushion.jpg" class="img-fluid rounded-start" alt="Cushions">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Cushion Floors</h5>
+              <p class="card-text fs-10">Available in a variety of woods, stones and abstract colours with varying size
+                options.</p>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#cushionModel">
+                More information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0 h-100">
+          <div class="col-md my-auto mx-auto">
+            <img src="images/laminate.jpg" class="img-fluid rounded-start" alt="Laminate Flooring">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Laminate Flooring</h5>
+              <p class="card-text fs-10">Affordable, attractive and effective, laminate flooring can completely
+                transform a room, and offers a solution which is durable, easy to install and simple to maintain.</p>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#laminateModal">
+                More information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="vinylModel" tabindex="-1" aria-labelledby="Luxury Vinyl Tiles More Information"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Luxury Vinyl Tiles</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md">
+                <p>From practical loop pile, elegant Saxony, hardwearing twist pile, and all-purpose Berber, you are
+                  sure to find a carpet type that is perfect for your needs.</p>
+                <p class="fw-bold">Click the links to visit our suppliers</p>
+              </div>
+              <div class="col-md">
+                <ul class="list-group">
+                  <li class="list-group-item"><a class="link-dark" href="https://www.polyflor.com/commercial"
+                      target="_blank">Polylfor</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.karndean.com/en-gb/floors"
+                      target="_blank">Karndean Design Flooring</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.victoriadesignfloors.co.uk/"
+                      target="_blank">Distinctive Flooring</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.lifestyle-floors.co.uk/"
+                      target="_blank">Lifestyle Designer Floors</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.moduleo.com/en-gb"
+                      target="_blank">Moduleo Luxury Vinyl Flooring</a></li>
                 </ul>
+              </div>
             </div>
+          </div>
         </div>
-    </nav>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <section id="services" class="py-5 fade-in">  
-        <div class="container mt-lg-4 mt-md-4">
-            <div class="row align-items-center">
-                <div class="col text-center mb-4 mb-lg-0">
-                    <h1 class="fw-bold display-6">Our Services</h1>
-                    <div class="accent-line"></div>
-                    <p class="lead">Transform your home with beautiful new flooring from L.M. Hill Carpets, based in Hillsborough in Sheffield. "Your local carpet shop." With a wide range of flooring options to choose from, you’ll find the perfect style, comfort level and practicality that’s just right for the way you live. We offer a huge choice of Carpet, Laminate, Vinyl and Rugs, as well as underlay and accessories at prices to suit all budgets.</p>
-                </div>
+  <div class="modal fade" id="rugModal" tabindex="-1" aria-labelledby="Rugs More Information" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Rugs</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Take a look at our fantastic selection of rugs and find the finishing touch for any room in your home. A
+            great way to add texture and warmth to any space, modern rugs can help to spruce up your interior and come
+            in a variety of colours to suit your taste. Whether you want something plain or patterned, we’re sure to
+            have everything you need so take a look at our extensive carpets and rugs online today.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="carpetModal" tabindex="-1" aria-labelledby="Carpets More Information" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Carpets</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md">
+                <p>From practical loop pile, elegant Saxony, hardwearing twist pile, and all-purpose Berber, you are
+                  sure to find a carpet type that is perfect for your needs.</p>
+                <p class="fw-bold">Click the links to visit our suppliers</p>
+              </div>
+              <div class="col-md">
+                <ul class="list-group">
+                  <li class="list-group-item"><a class="link-dark" href="https://www.cormarcarpets.co.uk/"
+                      target="_blank">Comar Carpets</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.kingsmeadcarpets.co.uk/"
+                      target="_blank">Kingsmead Carpets</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.abingdonflooring.co.uk/"
+                      target="_blank">Abingdon Flooring</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.carpetyourlife.com/en"
+                      target="_blank">Assosicated Weavers</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.brockway.co.uk/"
+                      target="_blank">Broackawy Carpets</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="card mb-3 mx-auto" style="max-width: 1200px;">
-                <div class="row g-0 h-100">
-                    <div class="col-md my-auto mx-auto">
-                        <img src="images/lvt.jpg" class="img-fluid rounded-start" alt="Luxury Vinyl Tiles">
-                    </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Luxury Vinyl Tiles</h5>
-                      <p class="card-text fs-10">Our Luxury Vinyl Tiles offer elegance and superior design quality, combined with high durability and resistance.</p>
-                      <a class="btn btn-success fs-10">More Information</a>
-                    </div>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cushionModel" tabindex="-1" aria-labelledby="Cushion Flooring More Information"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cushion Floors</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md">
+                <p>Available in a variety of woods, stones and abstract colours with varying size options. All our sheet
+                  lino comes with a heavily cushioned backing making for a warm and comfortable sensation under foot. We
+                  recommend that all sheet vinyl be fitted onto a solid, clean and smooth sub-floor. The vinyl can be
+                  loose laid, fully adhered or semi-adhered using double sided tape or spray adhesive. Any questions you
+                  require please don't hesitate to contact one of our experienced member's of staff who will gladly help
+                  with any fitting advice needed.</p>
+                <p class="fw-bold">Click the links to visit our suppliers</p>
+              </div>
+              <div class="col-md">
+                <ul class="list-group">
+                  <li class="list-group-item"><a class="link-dark"
+                      href="https://home.tarkett.co.uk/en_GB/node/tarkett-presents-1585" target="_blank">Rhinofloor</a>
+                  </li>
+                  <li class="list-group-item"><a class="link-dark"
+                      href="https://www.forbo.com/flooring/en-gl/products/consumer-products/novilon-cushion-vinyl-sheet/bxh345"
+                      target="_blank">Novilon</a></li>
+                  <li class="list-group-item"><a class="link-dark" href="https://www.beauflor.com/global/en"
+                      target="_blank">Beau Flor</a></li>
+                </ul>
+              </div>
             </div>
-
-            <div class="card mb-3 mx-auto" style="max-width: 1200px;">
-                <div class="row g-0 h-100">
-                    <div class="col-md my-auto mx-auto">
-                        <img src="images/rugs.jpg" class="img-fluid rounded-start" alt="Rugs">
-                    </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Rugs</h5>
-                      <p class="card-text fs-10">Take a look at our fantastic selection of rugs and find the finishing touch for any room in your home.</p>
-                      <a class="btn btn-success fs-10">More Information</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-3 mx-auto" style="max-width: 1200px;">
-                <div class="row g-0 h-100">
-                    <div class="col-md my-auto mx-auto">
-                       <img src="images/carpets.jpg" class="img-fluid rounded-start" alt="Carpets">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Carpets</h5>
-                      <p class="card-text fs-10">Our impressive carpet range offers inspiration for every home in a variety of styles, designs and colours.</p>
-                      <a class="btn btn-success fs-10">More Information</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-3 mx-auto" style="max-width: 1200px;">
-                <div class="row g-0 h-100">
-                    <div class="col-md my-auto mx-auto">
-                        <img src="images/cushion.jpg" class="img-fluid rounded-start" alt="Cushions">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Cushion Floors</h5>
-                      <p class="card-text fs-10">Available in a variety of woods, stones and abstract colours with varying size options.</p>
-                      <a class="btn btn-success fs-10">More Information</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-3 mx-auto" style="max-width: 1200px;">
-                <div class="row g-0 h-100">
-                    <div class="col-md my-auto mx-auto">
-                        <img src="images/laminate.jpg" class="img-fluid rounded-start" alt="Laminate Flooring">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Laminate Flooring</h5>
-                      <p class="card-text fs-10">Affordable, attractive and effective, laminate flooring can completely transform a room, and offers a solution which is durable, easy to install and simple to maintain.</p>
-                      <a class="btn btn-success fs-10">More Information</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
         </div>
-    </section>   
-
-    <footer>
-        <div class="text-center">
-            <small style="opacity: 0.8;">Made by <a href="" target="_blank" class="link-light">Harry Musther</a></small>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/page.js"></script>
+  <div class="modal fade" id="laminateModal" tabindex="-1" aria-labelledby="Laminate Flooring More Information"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Laminate Flooring</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Affordable, attractive and effective, laminate flooring can completely transform a room, and offers a
+            solution which is durable, easy to install and simple to maintain.</p>
+          <p>Affordable, attractive and effective, laminate flooring can completely transform a room, and offers a
+            solution which is durable, easy to install and simple to maintain. Both our tile effect and wood effect
+            laminate options create a realistic appearance. Choose from a range of styles and colours including oak,
+            walnut, slate, stone and beech.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <footer>
+    <div class="text-center">
+      <small style="opacity: 0.8;">Made by <a href="" target="_blank" class="link-light">Harry Musther</a></small>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/page.js"></script>
 </body>
+
 </html>
