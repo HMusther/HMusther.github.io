@@ -64,6 +64,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 
+
   const myModal = document.getElementById('myModal')
   const myInput = document.getElementById('myInput')
   

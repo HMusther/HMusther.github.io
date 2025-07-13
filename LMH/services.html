@@ -10,22 +10,38 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand h-100" href="index.html">L.M.Hill Carpets</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon custom-toggler"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto fs-5">
-          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link px-3 active" href="services.html">Our Services</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="index.html#testimonials">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="contact-us.html">Get in Touch</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <nav class="navbar nav-bar-light navbar-expand-md px-2 z-1040">
+            <div class="container">
+                <a class="navbar-brand" href="">
+                    <img src="images/logo4.png" class="img-fluid navbar-logo" alt="Lee M Hill Carpets Logo"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon custom-toggler"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fs-6">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 active" href="index.html#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="services.html">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link px-3" href="index.html#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="contact-us.html">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+  <div class="container-fluid">
+    <br/>
+    <br/>
+    <br/>
+  </div>
 
   <section id="services" class="py-5 fade-in">
     <div class="container mt-lg-4 mt-md-4 ">
@@ -51,24 +67,6 @@
               <p class="card-text fs-10">Our Luxury Vinyl Tiles offer elegance and superior design quality, combined
                 with high durability and resistance.</p>
               <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vinylModel">
-                More information
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
-        <div class="row g-0 h-100">
-          <div class="col-md my-auto mx-auto">
-            <img src="images/rugs.jpg" class="img-fluid rounded-start" alt="Rugs">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Rugs</h5>
-              <p class="card-text fs-10">Take a look at our fantastic selection of rugs and find the finishing touch for
-                any room in your home.</p>
-              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#rugModal">
                 More information
               </button>
             </div>
@@ -129,8 +127,56 @@
           </div>
         </div>
       </div>
+
+      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0 h-100">
+          <div class="col-md my-auto mx-auto">
+            <img src="images/laminate.jpg" class="img-fluid rounded-start" alt="Safety Flooring">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Safety Flooring</h5>
+              <p class="card-text fs-10">Affordable, attractive and effective, laminate flooring can completely
+                transform a room, and offers a solution which is durable, easy to install and simple to maintain.</p>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#laminateModal">
+                More information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0 h-100">
+          <div class="col-md my-auto mx-auto">
+            <img src="images/laminate.jpg" class="img-fluid rounded-start" alt="Safety Flooring">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Carpet Tiles</h5>
+              <p class="card-text fs-10">Affordable, attractive and effective, laminate flooring can completely
+                transform a room, and offers a solution which is durable, easy to install and simple to maintain.</p>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#laminateModal">
+                More information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
   </section>
+   <div class="container mt-lg-4 mt-md-4 ">
+      <div class="row align-items-center">
+        <div class="col text-center mb-4 mb-lg-0">
+          <h1 class="fw-bold display-6">Our Suppliers</h1>
+          <div class="accent-line"></div>
+          <p class="lead">You can visit all of our suppliers to see available styles and options to suit your needs.</p>
+        </div>
+      </div>
+
+
 
   <div class="modal fade" id="vinylModel" tabindex="-1" aria-labelledby="Luxury Vinyl Tiles More Information"
     aria-hidden="true">
@@ -170,28 +216,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="modal fade" id="rugModal" tabindex="-1" aria-labelledby="Rugs More Information" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Rugs</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Take a look at our fantastic selection of rugs and find the finishing touch for any room in your home. A
-            great way to add texture and warmth to any space, modern rugs can help to spruce up your interior and come
-            in a variety of colours to suit your taste. Whether you want something plain or patterned, we’re sure to
-            have everything you need so take a look at our extensive carpets and rugs online today.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
   </div>
 
   <div class="modal fade" id="carpetModal" tabindex="-1" aria-labelledby="Carpets More Information" aria-hidden="true">
@@ -300,11 +324,42 @@
   </div>
   </div>
 
-  <footer>
-    <div class="text-center">
-      <small style="opacity: 0.8;">Made by <a href="" target="_blank" class="link-light">Harry Musther</a></small>
-    </div>
-  </footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-start my-auto">
+                    <img src="images/logo.png" class="img-fluid" alt="Lee M Hill Logo" style="max-width: 150px;"/>
+                </div>
+
+                <div class="col-md-4 text-center my-auto">
+                    <p class="fs-6 fw-bold">Quick Links</p>
+                    <ul class="list-unstyled d-flex justify-content-center gap-3 flex-wrap">
+                        <li><a href="index.html" class="quick-link link-light text-decoration-none">Home</a></li>
+                        <li><a href="services.html" class="quick-link link-light text-decoration-none">Our Services</a></li>
+                        <li><a href="index.html#testimonials" class="quick-link link-light text-decoration-none">Testimonials</a></li>
+                        <li><a href="contact-us.html" class="quick-link link-light text-decoration-none">Get in touch</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 text-center text-md-end my-auto">
+                    <p class="fs-6 fw-bold">Socials</p>
+                    <a href="https://www.facebook.com/p/L-M-Hill-Carpets-And-Floor-Coverings-100048098784438/" target="_blank">
+                        <img src="images/facebook-light.svg" class="img img-fluid" width="32" height="32" alt="Facebook"/>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="text-center border-top pt-3">
+                        <small style="opacity: 0.8;">
+                            Made by <a href="#" target="_blank" class="link-light text-decoration-none">Harry Musther</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script src="scripts/page.js"></script>
