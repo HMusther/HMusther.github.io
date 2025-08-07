@@ -212,6 +212,35 @@ body, html {
     filter: grayscale(20%);
 }
 
+/* Ensure consistent service card image sizes */
+.service-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Ensure consistent button alignment across service cards */
+#services-grid .service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#services-grid .service-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+#services-grid .service-card .btn {
+    margin-top: auto;
+    align-self: center;
+}
+
+/* Hide legacy stacked service cards on the services page */
+#services .card.mb-3.mx-auto {
+    display: none !important;
+}
+
 .service-card:hover img {
     filter: grayscale(0%);
     transform: scale(1.05);
@@ -262,19 +291,42 @@ body, html {
     height: auto;
     margin-right: 0.3em;
 }
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary-black) 0%, var(--soft-black) 100%) !important;
-    border: none;
-    padding: 1rem 2rem;
-    font-weight: 600;
-    border-color: linear-gradient(135deg, var(--primary-black) 0%, var(--soft-black) 100%) !important;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.btn {
+    border-radius: 8px;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-.btn-primary:hover {
-    background: var(--charcoal) !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+/* Brand buttons */
+.btn-primary,
+.btn-success {
+    background: linear-gradient(135deg, #67BF59 0%, #5ab04f 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    padding: 0.9rem 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 16px rgba(103, 191, 89, 0.28);
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    background: linear-gradient(135deg, #5ab04f 0%, #4fa447 100%) !important;
+    box-shadow: 0 8px 18px rgba(103, 191, 89, 0.34);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active,
+.btn-success:active {
+    background: #4a9b43 !important;
+    box-shadow: 0 3px 10px rgba(103, 191, 89, 0.28) inset, 0 3px 10px rgba(0,0,0,0.15);
+    transform: translateY(0);
+}
+
+.btn-primary:focus-visible,
+.btn-success:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(103, 191, 89, 0.35) !important;
 }
 
 .footer {
@@ -325,6 +377,101 @@ body, html {
     .service-card .card-body {
         padding: 1.5rem;
     }
+}
+
+/* Nudge services section down to avoid overlap with fixed navbar */
+#services {
+    margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+    #services {
+        margin-top: 64px;
+    }
+}
+
+/* Suppliers logo grid */
+.supplier-logos {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .supplier-logos { grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .supplier-logos { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+.supplier-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 96px;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.supplier-logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    border-color: rgba(103, 191, 89, 0.45);
+    background-color: #fbfefb;
+}
+
+.supplier-logo:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(103, 191, 89, 0.35);
+    border-color: var(--accent-green);
+}
+
+.supplier-logo img {
+    max-height: 42px;
+    width: auto;
+    height: auto;
+}
+
+.supplier-logo .brand-text {
+    color: var(--charcoal);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+/* Supplier section headings and spacing */
+.supplier-group { 
+    margin-top: 1.25rem; 
+    margin-bottom: 2rem; 
+}
+
+.supplier-heading {
+    font-size: 1.05rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+}
+
+.supplier-heading::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 2px;
+    background: var(--accent-green);
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .supplier-heading { text-align: center; }
+    .supplier-heading::after { margin-left: auto; margin-right: auto; }
 }
 
 .fade-in {
