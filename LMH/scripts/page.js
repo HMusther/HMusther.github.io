@@ -35,6 +35,35 @@ const setupSmoothScroll = () => {
 
   document.addEventListener('click', handleAnchorClick, { passive: false });
 
+  // Highlight active nav item based on current pathname/hash
+  const highlightActiveNav = () => {
+    const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+    const currentHash = window.location.hash;
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+      try {
+        const u = new URL(link.href, window.location.href);
+        const linkPath = u.pathname.replace(/\/index\.html$/, '/');
+        const linkHash = u.hash;
+        const samePage = linkPath === currentPath;
+        const bothNoHash = !linkHash && !currentHash;
+        const bothHash = linkHash && currentHash && linkHash === currentHash;
+        if ((samePage && (bothNoHash || bothHash)) || (!samePage && linkPath === currentPath)) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      } catch (_) {}
+    });
+  };
+
+  window.addEventListener('hashchange', highlightActiveNav, { passive: true });
+  window.addEventListener('popstate', highlightActiveNav, { passive: true });
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(highlightActiveNav, 0);
+  } else {
+    window.addEventListener('DOMContentLoaded', () => setTimeout(highlightActiveNav, 0));
+  }
+
   // If the page loads with a hash, offset for the fixed navbar
   const scrollToHashOnLoad = () => {
     if (!window.location.hash) return;

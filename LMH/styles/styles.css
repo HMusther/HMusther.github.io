@@ -121,6 +121,19 @@ body, html {
     left: 10%;
 }
 
+/* Remove odd tap highlights and focus borders on mobile nav interactions */
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .navbar-toggler {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.navbar .nav-link:focus,
+.navbar .nav-link:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .navbar-toggler {
     border: none !important;
     box-shadow: none !important;
@@ -315,7 +328,7 @@ body, html {
     margin-right: 0.3em;
 }
 .btn {
-    border-radius: 6px;
+    border-radius: 4px;
     transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -325,17 +338,17 @@ body, html {
     background: #2f6e2a !important; /* darker for light backgrounds */
     border: none !important;
     color: #f6fff5 !important; /* slightly off-white for softer contrast */
-    padding: 0.9rem 1.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    box-shadow: 0 6px 16px rgba(47, 110, 42, 0.28);
+    padding: 0.8rem 1.2rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    box-shadow: 0 4px 12px rgba(47, 110, 42, 0.22);
 }
 
 .btn-primary:hover,
 .btn-success:hover {
     background: #295f26 !important;
-    box-shadow: 0 8px 18px rgba(47, 110, 42, 0.34);
+    box-shadow: 0 6px 14px rgba(47, 110, 42, 0.28);
     transform: translateY(-1px);
 }
 
