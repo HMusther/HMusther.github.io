@@ -292,41 +292,72 @@ body, html {
     margin-right: 0.3em;
 }
 .btn {
-    border-radius: 8px;
+    border-radius: 6px;
     transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Brand buttons */
 .btn-primary,
 .btn-success {
-    background: linear-gradient(135deg, #67BF59 0%, #5ab04f 100%) !important;
+    background: #2f6e2a !important; /* darker for light backgrounds */
     border: none !important;
-    color: #ffffff !important;
+    color: #f6fff5 !important; /* slightly off-white for softer contrast */
     padding: 0.9rem 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 6px 16px rgba(103, 191, 89, 0.28);
+    letter-spacing: 0.6px;
+    box-shadow: 0 6px 16px rgba(47, 110, 42, 0.28);
 }
 
 .btn-primary:hover,
 .btn-success:hover {
-    background: linear-gradient(135deg, #5ab04f 0%, #4fa447 100%) !important;
-    box-shadow: 0 8px 18px rgba(103, 191, 89, 0.34);
+    background: #295f26 !important;
+    box-shadow: 0 8px 18px rgba(47, 110, 42, 0.34);
     transform: translateY(-1px);
 }
 
 .btn-primary:active,
 .btn-success:active {
-    background: #4a9b43 !important;
-    box-shadow: 0 3px 10px rgba(103, 191, 89, 0.28) inset, 0 3px 10px rgba(0,0,0,0.15);
+    background: #234f20 !important;
+    box-shadow: 0 3px 10px rgba(47, 110, 42, 0.28) inset, 0 3px 10px rgba(0,0,0,0.15);
     transform: translateY(0);
 }
 
 .btn-primary:focus-visible,
 .btn-success:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 0.25rem rgba(103, 191, 89, 0.35) !important;
+    box-shadow: 0 0 0 0.25rem rgba(47, 110, 42, 0.35) !important;
+}
+
+/* Lighter variant on dark backgrounds for better contrast */
+.section-alt .btn-primary,
+.section-alt .btn-success,
+.carousel .hero-caption .btn-primary,
+.carousel .hero-caption .btn-success,
+.footer .btn-primary,
+.footer .btn-success {
+    background: #8fd08b !important; /* lighter green */
+    color: #102414 !important;     /* darker text for readability */
+    box-shadow: 0 6px 16px rgba(143, 208, 139, 0.25);
+}
+
+.section-alt .btn-primary:hover,
+.section-alt .btn-success:hover,
+.carousel .hero-caption .btn-primary:hover,
+.carousel .hero-caption .btn-success:hover,
+.footer .btn-primary:hover,
+.footer .btn-success:hover {
+    background: #82c77d !important;
+    box-shadow: 0 8px 18px rgba(130, 199, 125, 0.35);
+}
+
+.section-alt .btn-primary:active,
+.section-alt .btn-success:active,
+.carousel .hero-caption .btn-primary:active,
+.carousel .hero-caption .btn-success:active,
+.footer .btn-primary:active,
+.footer .btn-success:active {
+    background: #73b970 !important;
 }
 
 .footer {
@@ -377,6 +408,72 @@ body, html {
     .service-card .card-body {
         padding: 1.5rem;
     }
+
+    /* Keep hero flush under fixed navbar for a seamless look */
+    .banner-scroller { margin-top: 0; }
+}
+
+/* Hero carousel captions */
+.carousel .hero-caption {
+    padding: 1.25rem 1.5rem;
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel .hero-caption h2 {
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.carousel .hero-caption p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1rem;
+}
+
+/* Full-width gradient shading behind captions */
+.carousel .carousel-caption {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: none;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+}
+
+.carousel .carousel-caption::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      linear-gradient(90deg,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.36) 22%,
+        rgba(0,0,0,0.46) 50%,
+        rgba(0,0,0,0.36) 78%,
+        rgba(0,0,0,0) 100%),
+      linear-gradient(180deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0) 50%,
+        rgba(0,0,0,0.15) 100%);
+}
+
+@media (max-width: 768px) {
+  .carousel .carousel-caption { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .carousel .hero-caption { padding: 1rem 1.25rem; }
 }
 
 /* Nudge services section down to avoid overlap with fixed navbar */
