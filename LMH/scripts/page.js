@@ -63,18 +63,19 @@ setupSmoothScroll();
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
-              entry.target.style.opacity = '1';
-              entry.target.style.transform = 'translateY(0)';
+              entry.target.classList.add('is-visible');
           }
       });
   }, observerOptions);
 
+  // Existing fade-in sections
   document.querySelectorAll('.fade-in').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'all 0.8s ease';
+      el.classList.add('reveal');
       observer.observe(el);
   });
+
+  // Generic reveal-on-scroll
+  document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
 
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
