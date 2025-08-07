@@ -120,8 +120,30 @@ body, html {
     left: 10%;
 }
 
-.navbar-toggler-icon{
-    filter: invert(1);
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    filter: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Improve drag experience on carousel */
+.carousel {
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+}
+.carousel img {
+    -webkit-user-drag: none;
 }
 
 
@@ -400,6 +422,9 @@ body, html {
     .navbar-brand {
         font-size: 1.2rem;
     }
+    /* Reduce navbar height on tablets/large phones */
+    .navbar { padding-top: 16px; }
+    .navbar.navbar-shrink { padding-top: 10px; }
     
     #home {
         padding: 2rem 0;
@@ -411,6 +436,16 @@ body, html {
 
     /* Keep hero flush under fixed navbar for a seamless look */
     .banner-scroller { margin-top: 0; }
+}
+
+/* Further reduction on small phones */
+@media (max-width: 576px) {
+    .navbar { padding-top: 10px; }
+    .navbar .navbar-logo { max-height: 84px; transform: translateY(6px); }
+    .navbar.navbar-shrink { padding-top: 8px; }
+    .navbar.navbar-shrink .navbar-logo { max-height: 52px; transform: translateY(0); }
+    /* Adjust anchor offset for smaller navbar */
+    #home, #services, #testimonials, #find-us { scroll-margin-top: 72px; }
 }
 
 /* Hero carousel captions */
@@ -472,7 +507,7 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  .carousel .carousel-caption { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .carousel .carousel-caption { padding-left: 0.75rem; padding-right: 0.75rem; padding-top: 56px; }
   .carousel .hero-caption { padding: 1rem 1.25rem; }
 }
 
@@ -485,6 +520,11 @@ body, html {
     #services {
         margin-top: 64px;
     }
+}
+
+/* Offset anchor targets for fixed navbar */
+#home, #services, #testimonials, #find-us {
+    scroll-margin-top: 90px;
 }
 
 /* Suppliers logo grid */
