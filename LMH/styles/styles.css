@@ -29,15 +29,18 @@ body, html {
     left: 0; /* Add this */
     right: 0; /* Add this */
     width: 100%; /* Add this */
+    overflow: visible;
     backdrop-filter: saturate(160%) blur(6px);
     transition: padding 0.25s ease, background 0.25s ease, backdrop-filter 0.25s ease;
 }
 
 /* Default navbar logo size and smooth transition when shrinking */
 .navbar .navbar-logo {
-    max-height: 100px;
+    max-height: 120px;
     height: auto;
-    transition: max-height 0.25s ease;
+    transform: translateY(18px);
+    transition: max-height 0.25s ease, transform 0.25s ease;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
 }
 
 /* Smaller navbar when user scrolls */
@@ -48,17 +51,28 @@ body, html {
 }
 
 .navbar.navbar-shrink .navbar-logo {
-    max-height: 64px;
+    max-height: 68px;
+    transform: translateY(0);
 }
 
 /* Responsive tweak: keep logo readable on small screens */
 @media (max-width: 768px) {
     .navbar .navbar-logo {
-        max-height: 88px;
+        max-height: 100px;
+        transform: translateY(14px);
     }
     .navbar.navbar-shrink .navbar-logo {
-        max-height: 56px;
+        max-height: 60px;
+        transform: translateY(0);
     }
+}
+
+/* Allow the brand container to let the logo overflow outside the navbar */
+.navbar .navbar-brand {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand {
