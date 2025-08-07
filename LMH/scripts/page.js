@@ -3,7 +3,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute('href'));
           if (target) {
-              const navbarHeight = document.querySelector('.navbar').offsetHeight;
+              const navbar = document.querySelector('.navbar');
+              const navbarHeight = navbar ? navbar.offsetHeight : 0;
               const targetPosition = target.offsetTop - navbarHeight;
               
               window.scrollTo({
@@ -35,18 +36,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       observer.observe(el);
   });
 
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    const subject = `L.M.Hill Inquiry from ${name}`;
-    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-    
-    window.location.href = `mailto:lmhillcarpets@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-  });
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      const subject = `L.M.Hill Inquiry from ${name}`;
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+      
+      window.location.href = `mailto:lmhillcarpets@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+  }
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -65,9 +69,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 
 
-  const myModal = document.getElementById('myModal')
-  const myInput = document.getElementById('myInput')
-  
-  myModal.addEventListener('shown.bs.modal', () => {
-    myInput.focus()
-  })
+  const myModal = document.getElementById('myModal');
+  const myInput = document.getElementById('myInput');
+  if (myModal && myInput) {
+    myModal.addEventListener('shown.bs.modal', () => {
+      myInput.focus();
+    });
+  }
+
+  // Navbar shrink-on-scroll
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    const handleNavbarShrink = () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('navbar-shrink');
+      } else {
+        navbar.classList.remove('navbar-shrink');
+      }
+    };
+
+    handleNavbarShrink();
+    window.addEventListener('scroll', handleNavbarShrink, { passive: true });
+  }

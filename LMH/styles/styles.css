@@ -21,7 +21,7 @@ body, html {
 }
 
 .navbar {
-    background: linear-gradient(180deg,rgba(77, 77, 77, 1) 0%, rgba(77, 77, 77, 0.4) 60%, rgba(77, 77, 77, 0.010) 100%) !important;
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.85) 0%, rgba(30, 30, 30, 0.35) 70%, rgba(30, 30, 30, 0) 100%) !important;
     padding-top: 46px;
     z-index: 1030;
     position: fixed !important;
@@ -29,6 +29,36 @@ body, html {
     left: 0; /* Add this */
     right: 0; /* Add this */
     width: 100%; /* Add this */
+    backdrop-filter: saturate(160%) blur(6px);
+    transition: padding 0.25s ease, background 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+/* Default navbar logo size and smooth transition when shrinking */
+.navbar .navbar-logo {
+    max-height: 100px;
+    height: auto;
+    transition: max-height 0.25s ease;
+}
+
+/* Smaller navbar when user scrolls */
+.navbar.navbar-shrink {
+    padding-top: 12px;
+    background: rgba(30, 30, 30, 0.92) !important;
+    backdrop-filter: saturate(140%) blur(4px);
+}
+
+.navbar.navbar-shrink .navbar-logo {
+    max-height: 64px;
+}
+
+/* Responsive tweak: keep logo readable on small screens */
+@media (max-width: 768px) {
+    .navbar .navbar-logo {
+        max-height: 88px;
+    }
+    .navbar.navbar-shrink .navbar-logo {
+        max-height: 56px;
+    }
 }
 
 .navbar-brand {
