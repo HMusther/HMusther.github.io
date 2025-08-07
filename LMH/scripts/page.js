@@ -107,7 +107,13 @@ setupSmoothScroll();
   // Navbar shrink-on-scroll
   const navbar = document.querySelector('.navbar');
   if (navbar) {
+    const mobileQuery = window.matchMedia('(max-width: 768px)');
     const handleNavbarShrink = () => {
+      if (mobileQuery.matches) {
+        // On mobile, keep navbar in the smaller state at all times
+        navbar.classList.add('navbar-shrink');
+        return;
+      }
       if (window.scrollY > 20) {
         navbar.classList.add('navbar-shrink');
       } else {
@@ -117,6 +123,9 @@ setupSmoothScroll();
 
     handleNavbarShrink();
     window.addEventListener('scroll', handleNavbarShrink, { passive: true });
+    // Re-evaluate when resizing across breakpoint
+    window.addEventListener('resize', handleNavbarShrink, { passive: true });
+    mobileQuery.addEventListener('change', handleNavbarShrink);
   }
 
   // Enable swipe/drag navigation on Bootstrap carousel

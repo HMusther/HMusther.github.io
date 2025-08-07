@@ -423,9 +423,10 @@ body, html {
     .navbar-brand {
         font-size: 1.2rem;
     }
-    /* Reduce navbar height on tablets/large phones */
-    .navbar { padding-top: 16px; }
-    .navbar.navbar-shrink { padding-top: 10px; }
+    /* Keep navbar compact and consistent (no size change on scroll) */
+    .navbar, .navbar.navbar-shrink { padding-top: 3px; padding-bottom: 2px; background: rgba(30,30,30,0.92) !important; }
+    .navbar .navbar-logo { max-height: 44px; transform: translateY(0); }
+    .navbar.navbar-shrink .navbar-logo { max-height: 44px; transform: translateY(0); }
     
     #home {
         padding: 2rem 0;
@@ -441,12 +442,11 @@ body, html {
 
 /* Further reduction on small phones */
 @media (max-width: 576px) {
-    .navbar { padding-top: 10px; }
-    .navbar .navbar-logo { max-height: 84px; transform: translateY(6px); }
-    .navbar.navbar-shrink { padding-top: 8px; }
-    .navbar.navbar-shrink .navbar-logo { max-height: 52px; transform: translateY(0); }
+    .navbar, .navbar.navbar-shrink { padding-top: 2px; padding-bottom: 1px; }
+    .navbar .navbar-logo { max-height: 36px; transform: translateY(0); }
+    .navbar.navbar-shrink .navbar-logo { max-height: 36px; transform: translateY(0); }
     /* Adjust anchor offset for smaller navbar */
-    #home, #services, #testimonials, #find-us { scroll-margin-top: 72px; }
+    #home, #services, #testimonials, #find-us { scroll-margin-top: 56px; }
 }
 
 /* Hero carousel captions */
