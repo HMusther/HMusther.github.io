@@ -229,6 +229,16 @@ body, html {
     text-shadow: 0 0 10px var(--accent-green);
 }
 
+/* Accent link utility (used to replace inline styles on contact details) */
+.link-accent {
+    color: var(--accent-green) !important;
+}
+.link-accent:hover,
+.link-accent:focus {
+    color: var(--accent-green) !important;
+    text-decoration: underline;
+}
+
 .service-card {
     border: none;
     border-radius: 15px;
@@ -453,6 +463,10 @@ body, html {
 
     /* Keep hero flush under fixed navbar for a seamless look */
     .banner-scroller { margin-top: 0; }
+
+    /* Reduce top spacing for page headers on mobile */
+    #services,
+    #contact-us { margin-top: 16px; }
 }
 
 /* Further reduction on small phones */
@@ -461,7 +475,7 @@ body, html {
     .navbar .navbar-logo { max-height: 36px; transform: translateY(0); }
     .navbar.navbar-shrink .navbar-logo { max-height: 36px; transform: translateY(0); }
     /* Adjust anchor offset for smaller navbar */
-    #home, #services, #testimonials, #find-us { scroll-margin-top: 56px; }
+    #home, #services, #testimonials, #find-us, #contact-us { scroll-margin-top: 56px; }
 }
 
 /* Hero carousel captions */
@@ -538,8 +552,19 @@ body, html {
     }
 }
 
+/* Nudge contact page section down to avoid overlap with fixed navbar */
+#contact-us {
+    margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+    #contact-us {
+        margin-top: 64px;
+    }
+}
+
 /* Offset anchor targets for fixed navbar */
-#home, #services, #testimonials, #find-us {
+#home, #services, #testimonials, #find-us, #contact-us {
     scroll-margin-top: 90px;
 }
 
@@ -595,6 +620,12 @@ body, html {
     font-weight: 700;
     letter-spacing: 0.2px;
     text-align: center;
+}
+
+/* Form label utility to replace inline styles */
+.form-label-strong {
+    color: var(--charcoal);
+    font-weight: 600;
 }
 
 /* Supplier section headings and spacing */
