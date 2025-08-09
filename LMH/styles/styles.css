@@ -130,6 +130,7 @@ body, html {
 
 .navbar .nav-link:focus,
 .navbar .nav-link:active {
+    /* Keep default outline removed only for legacy browsers; provide focus-visible styles below */
     outline: none !important;
     box-shadow: none !important;
 }
@@ -143,6 +144,17 @@ body, html {
 .navbar-toggler:focus-visible {
     outline: none !important;
     box-shadow: none !important;
+}
+
+/* Accessible focus indicators */
+.navbar .nav-link:focus-visible,
+.navbar .navbar-brand:focus-visible {
+    outline: 2px solid var(--accent-green);
+    outline-offset: 2px;
+}
+.navbar .navbar-toggler:focus-visible {
+    outline: 2px solid var(--accent-green) !important;
+    outline-offset: 2px;
 }
 
 .navbar-toggler-icon {
@@ -227,6 +239,22 @@ body, html {
 .section-alt a:hover {
     color: white !important;
     text-shadow: 0 0 10px var(--accent-green);
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 2000;
+    border-radius: 0 0 4px 0;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 0;
 }
 
 /* Accent link utility (used to replace inline styles on contact details) */

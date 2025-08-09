@@ -47,10 +47,13 @@ const setupSmoothScroll = () => {
         const samePage = linkPath === currentPath;
         const bothNoHash = !linkHash && !currentHash;
         const bothHash = linkHash && currentHash && linkHash === currentHash;
-        if ((samePage && (bothNoHash || bothHash)) || (!samePage && linkPath === currentPath)) {
+        const isActive = (samePage && (bothNoHash || bothHash)) || (!samePage && linkPath === currentPath);
+        if (isActive) {
           link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
         } else {
           link.classList.remove('active');
+          link.removeAttribute('aria-current');
         }
       } catch (_) {}
     });
