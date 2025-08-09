@@ -84,6 +84,49 @@ const setupSmoothScroll = () => {
 
 setupSmoothScroll();
 
+// Ensure all external links open in a new tab for safety and UX
+const setupExternalLinksTargeting = () => {
+  const anchors = document.querySelectorAll('a[href]');
+  anchors.forEach((anchor) => {
+    const hrefRaw = anchor.getAttribute('href');
+    if (!hrefRaw) return;
+    const href = hrefRaw.trim();
+    // Skip in-page anchors and special schemes
+    const lower = href.toLowerCase();
+    if (
+      href.startsWith('#') ||
+      lower.startsWith('mailto:') ||
+      lower.startsWith('tel:') ||
+      lower.startsWith('javascript:')
+    ) {
+      return;
+    }
+
+    let resolvedUrl;
+    try {
+      resolvedUrl = new URL(href, window.location.href);
+    } catch (_) {
+      return;
+    }
+
+    const isExternal = resolvedUrl.origin !== window.location.origin;
+    if (!isExternal) return;
+
+    // Force external links to open in a new tab and add security rel
+    anchor.setAttribute('target', '_blank');
+    const existingRel = (anchor.getAttribute('rel') || '').split(/\s+/);
+    if (!existingRel.includes('noopener')) existingRel.push('noopener');
+    if (!existingRel.includes('noreferrer')) existingRel.push('noreferrer');
+    anchor.setAttribute('rel', existingRel.filter(Boolean).join(' ').trim());
+  });
+};
+
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(setupExternalLinksTargeting, 0);
+} else {
+  window.addEventListener('DOMContentLoaded', () => setTimeout(setupExternalLinksTargeting, 0));
+}
+
   const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'

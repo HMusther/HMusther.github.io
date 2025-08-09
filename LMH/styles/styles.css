@@ -438,6 +438,8 @@ body, html {
     }
     /* Keep navbar compact and consistent (no size change on scroll) */
     .navbar, .navbar.navbar-shrink { padding-top: 3px; padding-bottom: 2px; background: rgba(30,30,30,0.92) !important; }
+    /* Use sticky on mobile so content flows below navbar (prevents overlay on carousel) */
+    .navbar { position: sticky !important; top: 0; }
     .navbar .navbar-logo { max-height: 44px; transform: translateY(0); }
     .navbar.navbar-shrink .navbar-logo { max-height: 44px; transform: translateY(0); }
     
