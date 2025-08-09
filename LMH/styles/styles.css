@@ -22,7 +22,7 @@ body, html {
 
 .navbar {
     background: linear-gradient(180deg, rgba(30, 30, 30, 0.85) 0%, rgba(30, 30, 30, 0.35) 70%, rgba(30, 30, 30, 0) 100%) !important;
-    padding-top: 46px;
+    padding-top: 16px;
     z-index: 1030;
     position: fixed !important;
     top: 0; /* Add this */
@@ -36,22 +36,22 @@ body, html {
 
 /* Default navbar logo size and smooth transition when shrinking */
 .navbar .navbar-logo {
-    max-height: 120px;
+    max-height: 72px;
     height: auto;
-    transform: translateY(18px);
+    transform: translateY(0);
     transition: max-height 0.25s ease, transform 0.25s ease;
     filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
 }
 
 /* Smaller navbar when user scrolls */
 .navbar.navbar-shrink {
-    padding-top: 12px;
+    padding-top: 8px;
     background: rgba(30, 30, 30, 0.92) !important;
     backdrop-filter: saturate(140%) blur(4px);
 }
 
 .navbar.navbar-shrink .navbar-logo {
-    max-height: 68px;
+    max-height: 56px;
     transform: translateY(0);
 }
 
