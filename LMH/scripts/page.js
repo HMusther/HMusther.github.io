@@ -250,4 +250,48 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     carouselEl.addEventListener('mousedown', (e) => { isMouseDown = true; onTouchStart(e); });
     carouselEl.addEventListener('mousemove', (e) => { if (isMouseDown) onTouchMove(e); });
     document.addEventListener('mouseup', (e) => { if (isMouseDown) { onTouchEnd(e); isMouseDown = false; } });
+
+    // Pause carousel when hovering/focusing the CTA buttons only
+    const pauseTargets = carouselEl.querySelectorAll('.carousel-caption .btn, .hero-caption .btn');
+    pauseTargets.forEach((el) => {
+      el.addEventListener('mouseenter', () => bsCarousel.pause());
+      el.addEventListener('mouseleave', () => bsCarousel.cycle());
+      el.addEventListener('focus', () => bsCarousel.pause());
+      el.addEventListener('blur', () => bsCarousel.cycle());
+      el.addEventListener('touchstart', () => bsCarousel.pause(), { passive: true });
+      el.addEventListener('touchend', () => bsCarousel.cycle(), { passive: true });
+    });
+  }
+
+  // Simple lightbox for gallery
+  const gallery = document.querySelector('.gallery-grid');
+  if (gallery) {
+    let overlay = document.querySelector('.lightbox-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img alt="Expanded gallery image" />';
+      document.body.appendChild(overlay);
+    }
+    const overlayImg = overlay.querySelector('img');
+
+    gallery.addEventListener('click', (e) => {
+      const link = e.target.closest('a.gallery-item');
+      if (!link) return;
+      e.preventDefault();
+      const src = link.getAttribute('href');
+      overlayImg.src = src;
+      overlay.classList.add('is-open');
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay || e.target === overlayImg) {
+        overlay.classList.remove('is-open');
+        overlayImg.removeAttribute('src');
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') overlay.classList.remove('is-open');
+    });
   }
