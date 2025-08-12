@@ -736,7 +736,7 @@ body, html {
 
 /* Two-column layout for suppliers section on md+ */
 /* Suppliers columns now use Bootstrap grid; keep only minor tweaks */
-.suppliers-columns { padding-left: 0; padding-right: 0; margin-left: calc(var(--bs-gutter-x) * -0.5); margin-right: calc(var(--bs-gutter-x) * -0.5); }
+.suppliers-columns { padding-left: 0; padding-right: 0; margin-left: calc(var(--bs-gutter-x) * -0.5); margin-right: calc(var(--bs-gutter-x) * -0.5); margin-bottom: 3rem; }
 .suppliers-columns > .col { display: block; }
 .suppliers-columns > .col > .supplier-group { width: auto; }
 
