@@ -667,12 +667,12 @@ body, html {
     display: grid;
     width: 100%;
     box-sizing: border-box;
-    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
     gap: 24px;
 }
 
 @media (max-width: 1200px) {
-  .supplier-logos { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
+  .supplier-logos { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
 }
 
 @media (max-width: 768px) {
