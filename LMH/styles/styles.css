@@ -13,6 +13,7 @@ body, html {
     line-height: 1.6;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .container-fluid {
@@ -676,7 +677,14 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  .supplier-logos { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+  .supplier-logos { grid-template-columns: repeat(2, minmax(100px, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .supplier-logos { 
+    grid-template-columns: repeat(2, minmax(90px, 1fr)); 
+    gap: 16px;
+  }
 }
 
 .supplier-logo {
@@ -768,7 +776,7 @@ body, html {
 
 
 
-.suppliers-columns { padding-left: 0; padding-right: 0; margin-left: calc(var(--bs-gutter-x) * -0.5); margin-right: calc(var(--bs-gutter-x) * -0.5); margin-bottom: 3rem; }
+.suppliers-columns { padding-left: 0; padding-right: 0; margin-bottom: 3rem; }
 .suppliers-columns > .col { display: block; }
 .suppliers-columns > .col > .supplier-group { width: auto; }
 
