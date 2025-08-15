@@ -706,9 +706,11 @@ body, html {
 }
 
 .supplier-logo img {
-    max-height: 42px;
+    max-height: 45px;
+    max-width: 90%;
     width: auto;
     height: auto;
+    object-fit: contain;
 }
 
 .supplier-logo .brand-text {
@@ -716,6 +718,19 @@ body, html {
     font-weight: 700;
     letter-spacing: 0.2px;
     text-align: center;
+}
+
+/* Specific supplier logo customizations */
+.supplier-logo img[alt="Hugh Mackay Logo"] {
+    background-color: #314B60;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.supplier-logo img[alt="Kingsmead Logo"] {
+    background-color: #2D3E4B;
+    padding: 8px;
+    border-radius: 6px;
 }
 
 /* Form label utility to replace inline styles */
