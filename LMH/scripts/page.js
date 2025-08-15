@@ -145,6 +145,11 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 
   // Existing fade-in sections
   document.querySelectorAll('.fade-in').forEach(el => {
+      // For gallery on mobile, ensure immediate visibility
+      if (el.id === 'gallery' && window.innerWidth <= 768) {
+          el.classList.add('is-visible');
+          return;
+      }
       el.classList.add('reveal');
       observer.observe(el);
   });
