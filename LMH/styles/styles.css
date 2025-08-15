@@ -25,16 +25,16 @@ body, html {
     padding-top: 16px;
     z-index: 1030;
     position: fixed !important;
-    top: 0; /* Add this */
-    left: 0; /* Add this */
-    right: 0; /* Add this */
-    width: 100%; /* Add this */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     overflow: visible;
     backdrop-filter: saturate(160%) blur(6px);
     transition: padding 0.25s ease, background 0.25s ease, backdrop-filter 0.25s ease;
 }
 
-/* Default navbar logo size and smooth transition when shrinking */
+
 .navbar .navbar-logo {
     max-height: 72px;
     height: auto;
@@ -43,7 +43,7 @@ body, html {
     filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
 }
 
-/* Smaller navbar when user scrolls */
+
 .navbar.navbar-shrink {
     padding-top: 8px;
     background: rgba(30, 30, 30, 0.92) !important;
@@ -55,7 +55,7 @@ body, html {
     transform: translateY(0);
 }
 
-/* Responsive tweak: keep logo readable on small screens */
+
 @media (max-width: 768px) {
     .navbar .navbar-logo {
         max-height: 100px;
@@ -67,7 +67,7 @@ body, html {
     }
 }
 
-/* Allow the brand container to let the logo overflow outside the navbar */
+
 .navbar .navbar-brand {
     position: relative;
     overflow: visible;
@@ -121,7 +121,7 @@ body, html {
     left: 10%;
 }
 
-/* Remove odd tap highlights and focus borders on mobile nav interactions */
+
 .navbar .nav-link,
 .navbar .navbar-brand,
 .navbar .navbar-toggler {
@@ -130,7 +130,7 @@ body, html {
 
 .navbar .nav-link:focus,
 .navbar .nav-link:active {
-    /* Keep default outline removed only for legacy browsers; provide focus-visible styles below */
+
     outline: none !important;
     box-shadow: none !important;
 }
@@ -146,7 +146,7 @@ body, html {
     box-shadow: none !important;
 }
 
-/* Accessible focus indicators */
+
 .navbar .nav-link:focus-visible,
 .navbar .navbar-brand:focus-visible {
     outline: 2px solid var(--accent-green);
@@ -162,7 +162,7 @@ body, html {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
-/* Improve drag experience on carousel */
+
 .carousel {
     user-select: none;
     -webkit-user-select: none;
@@ -244,7 +244,7 @@ body, html {
     text-shadow: 0 0 10px var(--accent-green);
 }
 
-/* Skip link for keyboard users */
+
 .skip-link {
     position: absolute;
     top: -40px;
@@ -260,7 +260,7 @@ body, html {
     top: 0;
 }
 
-/* Accent link utility (used to replace inline styles on contact details) */
+
 .link-accent {
     color: var(--accent-green) !important;
 }
@@ -289,14 +289,14 @@ body, html {
     filter: grayscale(20%);
 }
 
-/* Ensure consistent service card image sizes */
+
 .service-card .card-img-top {
     height: 220px;
     object-fit: cover;
     width: 100%;
 }
 
-/* Ensure consistent button alignment across service cards */
+
 #services-grid .service-card {
     display: flex;
     flex-direction: column;
@@ -313,7 +313,7 @@ body, html {
     align-self: center;
 }
 
-/* Hide legacy stacked service cards on the services page */
+
 #services .card.mb-3.mx-auto {
     display: none !important;
 }
@@ -373,12 +373,12 @@ body, html {
     transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Brand buttons */
+
 .btn-primary,
 .btn-success {
-    background: #2f6e2a !important; /* darker for light backgrounds */
+    background: #2f6e2a !important;
     border: none !important;
-    color: #f6fff5 !important; /* slightly off-white for softer contrast */
+    color: #f6fff5 !important;
     padding: 0.8rem 1.2rem;
     font-weight: 600;
     text-transform: none;
@@ -406,15 +406,15 @@ body, html {
     box-shadow: 0 0 0 0.25rem rgba(47, 110, 42, 0.35) !important;
 }
 
-/* Lighter variant on dark backgrounds for better contrast */
+
 .section-alt .btn-primary,
 .section-alt .btn-success,
 .carousel .hero-caption .btn-primary,
 .carousel .hero-caption .btn-success,
 .footer .btn-primary,
 .footer .btn-success {
-    background: #8fd08b !important; /* lighter green */
-    color: #102414 !important;     /* darker text for readability */
+    background: #8fd08b !important;
+    color: #102414 !important;
     box-shadow: 0 6px 16px rgba(143, 208, 139, 0.25);
 }
 
@@ -472,14 +472,14 @@ body, html {
 }
 
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .navbar-brand {
         font-size: 1.2rem;
     }
-    /* Keep navbar compact and consistent (no size change on scroll) */
+
     .navbar, .navbar.navbar-shrink { padding-top: 3px; padding-bottom: 2px; background: rgba(30,30,30,0.92) !important; }
-    /* Use sticky on mobile so content flows below navbar (prevents overlay on carousel) */
+
     .navbar { position: sticky !important; top: 0; }
     .navbar .navbar-logo { max-height: 44px; transform: translateY(0); }
     .navbar.navbar-shrink .navbar-logo { max-height: 44px; transform: translateY(0); }
@@ -492,24 +492,24 @@ body, html {
         padding: 1.5rem;
     }
 
-    /* Keep hero flush under fixed navbar for a seamless look */
+
     .banner-scroller { margin-top: 0; }
 
-    /* Reduce top spacing for page headers on mobile */
+
     #services,
     #contact-us { margin-top: 16px; }
 }
 
-/* Further reduction on small phones */
+
 @media (max-width: 576px) {
     .navbar, .navbar.navbar-shrink { padding-top: 2px; padding-bottom: 1px; }
     .navbar .navbar-logo { max-height: 36px; transform: translateY(0); }
     .navbar.navbar-shrink .navbar-logo { max-height: 36px; transform: translateY(0); }
-    /* Adjust anchor offset for smaller navbar */
+
     #home, #services, #testimonials, #find-us, #contact-us { scroll-margin-top: 56px; }
 }
 
-/* Hero carousel captions */
+
 .carousel .hero-caption {
     padding: 1.25rem 1.5rem;
     max-width: 720px;
@@ -529,7 +529,7 @@ body, html {
     margin-bottom: 1rem;
 }
 
-/* Full-width gradient shading behind captions */
+
 .carousel .carousel-caption {
     left: 0;
     right: 0;
@@ -572,7 +572,7 @@ body, html {
   .carousel .hero-caption { padding: 1rem 1.25rem; }
 }
 
-/* Nudge services section down to avoid overlap with fixed navbar */
+
 #services {
     margin-top: 48px;
 }
@@ -583,7 +583,7 @@ body, html {
     }
 }
 
-/* Nudge contact page section down to avoid overlap with fixed navbar */
+
 #contact-us {
     margin-top: 48px;
 }
@@ -594,12 +594,12 @@ body, html {
     }
 }
 
-/* Offset anchor targets for fixed navbar */
+
 #home, #services, #testimonials, #find-us, #contact-us {
     scroll-margin-top: 90px;
 }
 
-/* --- Gallery page --- */
+
 #gallery {
     margin-top: 48px;
 }
@@ -633,8 +633,8 @@ body, html {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    background: #000; /* black background behind images */
-    border: 3px solid #fff; /* white border */
+    background: #000;
+    border: 3px solid #fff;
     border-radius: 10px;
     box-shadow: 0 8px 22px rgba(0,0,0,0.12);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -642,7 +642,7 @@ body, html {
 }
 .gallery-thumb:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 12px 28px rgba(0,0,0,0.18); }
 
-/* Lightbox overlay */
+
 .lightbox-overlay {
     position: fixed;
     inset: 0;
@@ -662,7 +662,7 @@ body, html {
     background: #000;
 }
 
-/* Suppliers logo grid */
+
 .supplier-logos {
     display: grid;
     width: 100%;
@@ -720,7 +720,7 @@ body, html {
     text-align: center;
 }
 
-/* Specific supplier logo customizations */
+
 .supplier-logo img[alt="Hugh Mackay Logo"] {
     background-color: #314B60;
     padding: 8px;
@@ -733,13 +733,13 @@ body, html {
     border-radius: 6px;
 }
 
-/* Form label utility to replace inline styles */
+
 .form-label-strong {
     color: var(--charcoal);
     font-weight: 600;
 }
 
-/* Supplier section headings and spacing */
+
 .supplier-group { margin-top: 0; margin-bottom: 0; }
 
 .supplier-heading {
@@ -766,8 +766,8 @@ body, html {
     .supplier-heading::after { margin-left: auto; margin-right: auto; }
 }
 
-/* Two-column layout for suppliers section on md+ */
-/* Suppliers columns now use Bootstrap grid; keep only minor tweaks */
+
+
 .suppliers-columns { padding-left: 0; padding-right: 0; margin-left: calc(var(--bs-gutter-x) * -0.5); margin-right: calc(var(--bs-gutter-x) * -0.5); margin-bottom: 3rem; }
 .suppliers-columns > .col { display: block; }
 .suppliers-columns > .col > .supplier-group { width: auto; }
@@ -786,7 +786,7 @@ body, html {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Reveal-on-scroll utilities */
+
 .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -803,7 +803,7 @@ body, html {
     transform: none;
 }
 
-/* Staggered children when parent becomes visible */
+
 .stagger > * {
     opacity: 0;
     transform: translateY(16px);
@@ -814,7 +814,7 @@ body, html {
     transform: none;
 }
 
-/* Mobile-friendly gallery visibility */
+
 @media (max-width: 768px) {
     #gallery.fade-in {
         opacity: 1 !important;
@@ -823,7 +823,7 @@ body, html {
     }
 }
 
-/* Respect reduced motion preferences */
+
 @media (prefers-reduced-motion: reduce) {
     .fade-in, .reveal, .stagger > * {
         transition: none !important;

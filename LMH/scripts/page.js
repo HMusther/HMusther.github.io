@@ -1,4 +1,4 @@
-// Smooth scrolling for same-page anchors (handles href="#id" and "page#id")
+
 const setupSmoothScroll = () => {
   const handleAnchorClick = (event) => {
     const anchor = event.target.closest('a');
@@ -7,7 +7,7 @@ const setupSmoothScroll = () => {
     const resolved = new URL(href, window.location.href);
     const isSamePage = resolved.pathname === window.location.pathname;
 
-    // Smooth scroll to top if clicking Home link on the same page without a hash
+
     if (isSamePage && !resolved.hash) {
       event.preventDefault();
       history.replaceState(null, '', resolved.pathname);
@@ -17,10 +17,9 @@ const setupSmoothScroll = () => {
 
     if (!href.includes('#')) return;
 
-    // Resolve URL to compare pathnames and extract hash
-    // resolved and isSamePage already computed above
+
     const hash = resolved.hash;
-    if (!isSamePage || !hash) return; // allow normal nav for cross-page links
+    if (!isSamePage || !hash) return;
 
     const target = document.querySelector(hash);
     if (!target) return;
@@ -35,7 +34,7 @@ const setupSmoothScroll = () => {
 
   document.addEventListener('click', handleAnchorClick, { passive: false });
 
-  // Highlight active nav item based on current pathname/hash
+
   const highlightActiveNav = () => {
     const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
     const currentHash = window.location.hash;
@@ -67,7 +66,7 @@ const setupSmoothScroll = () => {
     window.addEventListener('DOMContentLoaded', () => setTimeout(highlightActiveNav, 0));
   }
 
-  // If the page loads with a hash, offset for the fixed navbar
+
   const scrollToHashOnLoad = () => {
     if (!window.location.hash) return;
     const target = document.querySelector(window.location.hash);
@@ -87,14 +86,14 @@ const setupSmoothScroll = () => {
 
 setupSmoothScroll();
 
-// Ensure all external links open in a new tab for safety and UX
+
 const setupExternalLinksTargeting = () => {
   const anchors = document.querySelectorAll('a[href]');
   anchors.forEach((anchor) => {
     const hrefRaw = anchor.getAttribute('href');
     if (!hrefRaw) return;
     const href = hrefRaw.trim();
-    // Skip in-page anchors and special schemes
+
     const lower = href.toLowerCase();
     if (
       href.startsWith('#') ||
@@ -115,7 +114,7 @@ const setupExternalLinksTargeting = () => {
     const isExternal = resolvedUrl.origin !== window.location.origin;
     if (!isExternal) return;
 
-    // Force external links to open in a new tab and add security rel
+
     anchor.setAttribute('target', '_blank');
     const existingRel = (anchor.getAttribute('rel') || '').split(/\s+/);
     if (!existingRel.includes('noopener')) existingRel.push('noopener');
@@ -143,9 +142,9 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
       });
   }, observerOptions);
 
-  // Existing fade-in sections
+
   document.querySelectorAll('.fade-in').forEach(el => {
-      // For gallery on mobile, ensure immediate visibility
+
       if (el.id === 'gallery' && window.innerWidth <= 768) {
           el.classList.add('is-visible');
           return;
@@ -154,7 +153,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
       observer.observe(el);
   });
 
-  // Generic reveal-on-scroll
+
   document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
 
   const contactForm = document.getElementById('contactForm');
@@ -173,7 +172,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     });
   }
 
-// (Removed duplicate anchor smooth-scroll listener)
+
 
 
   const myModal = document.getElementById('myModal');
@@ -184,13 +183,12 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     });
   }
 
-  // Navbar shrink-on-scroll
+
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     const mobileQuery = window.matchMedia('(max-width: 768px)');
     const handleNavbarShrink = () => {
       if (mobileQuery.matches) {
-        // On mobile, keep navbar in the smaller state at all times
         navbar.classList.add('navbar-shrink');
         return;
       }
@@ -203,12 +201,12 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 
     handleNavbarShrink();
     window.addEventListener('scroll', handleNavbarShrink, { passive: true });
-    // Re-evaluate when resizing across breakpoint
+
     window.addEventListener('resize', handleNavbarShrink, { passive: true });
     mobileQuery.addEventListener('change', handleNavbarShrink);
   }
 
-  // Enable swipe/drag navigation on Bootstrap carousel
+
   const carouselEl = document.querySelector('#carouselExampleIndicators');
   if (carouselEl) {
     const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
@@ -216,7 +214,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     let startY = 0;
     let isTouch = false;
 
-    const threshold = 40; // min px to qualify as a swipe
+    const threshold = 40;
 
     const onTouchStart = (e) => {
       isTouch = true;
@@ -226,7 +224,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     };
 
     const onTouchMove = (e) => {
-      // Allow vertical scroll; prevent default only when horizontal gesture dominates
+
       if (!isTouch) return;
       const t = e.touches ? e.touches[0] : e;
       const dx = t.clientX - startX;
@@ -245,18 +243,18 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
       isTouch = false;
     };
 
-    // Touch events
+
     carouselEl.addEventListener('touchstart', onTouchStart, { passive: true });
     carouselEl.addEventListener('touchmove', onTouchMove, { passive: false });
     carouselEl.addEventListener('touchend', onTouchEnd, { passive: true });
 
-    // Mouse drag support
+
     let isMouseDown = false;
     carouselEl.addEventListener('mousedown', (e) => { isMouseDown = true; onTouchStart(e); });
     carouselEl.addEventListener('mousemove', (e) => { if (isMouseDown) onTouchMove(e); });
     document.addEventListener('mouseup', (e) => { if (isMouseDown) { onTouchEnd(e); isMouseDown = false; } });
 
-    // Pause carousel when hovering/focusing the CTA buttons only
+
     const pauseTargets = carouselEl.querySelectorAll('.carousel-caption .btn, .hero-caption .btn');
     pauseTargets.forEach((el) => {
       el.addEventListener('mouseenter', () => bsCarousel.pause());
@@ -268,7 +266,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     });
   }
 
-  // Simple lightbox for gallery
+
   const gallery = document.querySelector('.gallery-grid');
   if (gallery) {
     let overlay = document.querySelector('.lightbox-overlay');
